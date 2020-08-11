@@ -54,7 +54,6 @@ class AddPost extends Component {
 }
 
 const mapDispatchToProps = (dispatch) => {
-    console.log('NNNNNNNNNNNN');
     return {
         add_post: (title, body) => {
             dispatch(add_post(title, body));
@@ -62,4 +61,4 @@ const mapDispatchToProps = (dispatch) => {
     };
 };
 
-export default connect(null,mapDispatchToProps)(AddPost);
+export default connect(null, mapDispatchToProps)(AddPost);

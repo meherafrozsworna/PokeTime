@@ -33,7 +33,6 @@ const RootReducer = (state = initState, action) => {
         };
     }
     if (action.type === 'ADD_POST') {
-        console.log('MMMMMMMMMMMMMMMMMMMMMMMMMMMMM');
         const newCount = state.count + 1;
         let newPost = {
             id: newCount + '',
