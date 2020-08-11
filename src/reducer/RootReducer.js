@@ -1,4 +1,5 @@
 const initState = {
+    count: 3,
     posts: [
         {
             id: '1',
@@ -29,6 +30,22 @@ const RootReducer = (state = initState, action) => {
         return {
             ...state,
             posts: newPosts,
+        };
+    }
+    if (action.type === 'ADD_POST') {
+        console.log('MMMMMMMMMMMMMMMMMMMMMMMMMMMMM');
+        const newCount = state.count + 1;
+        let newPost = {
+            id: newCount + '',
+            title: action.title,
+            body: action.body,
+        };
+        let newPostlist = state.posts.concat(newPost);
+        console.log(newPostlist);
+        return {
+            ...state,
+            count: newCount,
+            posts: newPostlist,
         };
     }
 

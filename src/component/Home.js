@@ -3,7 +3,6 @@ import { Link } from 'react-router-dom';
 import { connect } from 'react-redux';
 
 class Home extends Component {
-    
     render() {
         const { post } = this.props;
         const postList = post.length ? (
@@ -16,7 +15,6 @@ class Home extends Component {
                             </Link>
                             <p>{post.body}</p>
                         </div>
-                        
                     </div>
                 );
             })
@@ -26,7 +24,8 @@ class Home extends Component {
 
         return (
             <div className="container">
-                <h4 className="center">Home</h4>
+                
+                <h3 className="center">My POST</h3>
                 {postList}
             </div>
         );
@@ -38,6 +37,5 @@ const mapStateProps = (state) => {
         post: state.posts,
     };
 };
-
 
 export default connect(mapStateProps)(Home);
